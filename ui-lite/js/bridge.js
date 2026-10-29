@@ -3,7 +3,9 @@
 // HTTP POST and events arrive as Server-Sent Events.
 
 export function liveBridge(onEvent) {
-  const token = new URLSearchParams(location.search).get("token") || "";
+  const params = new URLSearchParams(location.search);
+  const token = params.get("token") || "";
+  const win = params.get("window") === "manage" ? "manage" : "main";
   const events = new EventSource(`/api/events?token=${encodeURIComponent(token)}`);
   events.onmessage = (e) => onEvent(JSON.parse(e.data));
   let seq = 0;
@@ -12,7 +14,7 @@ export function liveBridge(onEvent) {
       const id = `c-${++seq}`;
       const res = await fetch("/api/cmd", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "X-Ashgate-Token": token },
+        headers: { "Content-Type": "application/json", "X-Ashgate-Token": token, "X-Ashgate-Window": win },
         body: JSON.stringify({ id, cmd, args }),
       });
       const msg = await res.json();

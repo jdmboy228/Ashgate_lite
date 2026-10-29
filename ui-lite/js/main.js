@@ -31,8 +31,19 @@ function render() {
   const view = store.manage || store.ui.window === "manage"
     ? renderManage(ctx)
     : store.ui.screen === "addApp" ? renderAddApp(ctx) : renderMain(ctx);
+  if (store.resizable) view.append(...resizeHandles());
   root.replaceChildren(view);
   restoreFocus(focusKey, caret);
+}
+
+// The frameless main window resizes from invisible edge strips.
+function resizeHandles() {
+  return ["n", "s", "e", "w", "ne", "nw", "se", "sw"].map((edge) => {
+    const el = document.createElement("div");
+    el.className = `resize resize-${edge}`;
+    el.addEventListener("mousedown", (e) => e.button === 0 && quietCall("window.startResize", { edge }));
+    return el;
+  });
 }
 
 // Re-rendering replaces the DOM, so keyboard focus moves back by data-key.
@@ -260,6 +271,7 @@ async function boot() {
     return;
   }
   store.bridge = liveBridge(onEvent);
+  store.resizable = !store.manage;
   onEvent({ event: "state", data: await call("state.get") });
   if (!store.manage) store.ui.suggestions = (await quietCall("apps.suggest", { query: "" })) || [];
   scheduleRender();

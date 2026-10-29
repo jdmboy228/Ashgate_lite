@@ -310,6 +310,20 @@ input::placeholder { color: var(--color-text3); opacity: 1; }
 .manage-footer .btn-standard { padding: 0 12px; color: var(--color-text); }
 .edit-label { font: var(--type-label12Strong); color: var(--color-text3); }
 
+/* Invisible resize strips of the frameless main window (no design: window chrome). */
+.resize { position: absolute; z-index: 30; }
+.resize-n, .resize-s { left: 6px; right: 6px; height: 4px; cursor: ns-resize; }
+.resize-e, .resize-w { top: 6px; bottom: 6px; width: 4px; cursor: ew-resize; }
+.resize-n { top: 0; }
+.resize-s { bottom: 0; }
+.resize-e { right: 0; }
+.resize-w { left: 0; }
+.resize-ne, .resize-nw, .resize-se, .resize-sw { width: 6px; height: 6px; }
+.resize-ne { top: 0; right: 0; cursor: nesw-resize; }
+.resize-sw { bottom: 0; left: 0; cursor: nesw-resize; }
+.resize-nw { top: 0; left: 0; cursor: nwse-resize; }
+.resize-se { bottom: 0; right: 0; cursor: nwse-resize; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

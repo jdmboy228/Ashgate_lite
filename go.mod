@@ -3,6 +3,7 @@ module ashgate-lite
 go 1.25
 
 require (
+	github.com/jchv/go-webview2 v0.0.0-20260205173254-56598839c808
 	github.com/xtls/xray-core v1.250803.0
 	golang.org/x/sys v0.34.0
 )
@@ -14,6 +15,7 @@ require (
 	github.com/ghodss/yaml v1.0.1-0.20220118164431-d8423dcdf344 // indirect
 	github.com/google/btree v1.1.2 // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
+	github.com/jchv/go-winloader v0.0.0-20250406163304-c1995be93bd1 // indirect
 	github.com/juju/ratelimit v1.0.2 // indirect
 	github.com/klauspost/compress v1.17.4 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.12 // indirect
