@@ -116,7 +116,8 @@ function currentPill(ctx, view) {
         : text("addr ellipsis", p.hostMasked),
     ),
     down
-      ? h("span", { class: "ping-err f-monoAddr" }, icon("error-circle-16", "c-danger"), errorText(p.lastError))
+      // A proxy that stopped answering without a recorded cause timed out.
+      ? h("span", { class: "ping-err f-monoAddr" }, icon("error-circle-16", "c-danger"), errorText(p.lastError || "timeout"))
       : pingView(p.pingMs),
     h("button", {
       class: "btn btn-subtle icon-only", "aria-label": "Копировать ссылку",
@@ -143,13 +144,15 @@ const placeName = (p) => p.country || proxyName(p.slot);
 
 // ---------- proxy picker (d) ----------
 
-// fastestId is the quickest available proxy, unless that one is current
-// (design behavior.md §3: the «быстрый» tag).
+// fastestId is the quickest available proxy other than the current one
+// (the «быстрый» tag). TODO: insufficient data: behavior.md §3 also says no
+// proxy is tagged when the current one is the fastest, but its own example
+// for screen d (current Прокси 1 at 48 мс, tag on Прокси 3 at 64 мс)
+// contradicts that; the mockup's rule is used.
 function fastestId(proxies, currentId) {
-  const ok = proxies.filter((p) => p.available && p.pingMs !== null && p.pingMs !== undefined);
+  const ok = proxies.filter((p) => p.id !== currentId && p.available && p.pingMs !== null && p.pingMs !== undefined);
   if (!ok.length) return null;
-  const best = ok.reduce((a, b) => (b.pingMs < a.pingMs ? b : a));
-  return best.id === currentId ? null : best.id;
+  return ok.reduce((a, b) => (b.pingMs < a.pingMs ? b : a)).id;
 }
 
 function proxyPicker(ctx, view) {
