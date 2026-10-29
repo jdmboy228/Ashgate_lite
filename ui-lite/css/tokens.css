@@ -1,0 +1,109 @@
+/* Ashgate Lite — дизайн-токены. Сгенерировано из Figma (коллекция «Пульт · Тема»).
+   Тема переключается атрибутом <html data-theme="light|dark">. Не читать тему Windows. */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #F4F6FB;
+  --color-surface: #FFFFFF;
+  --color-surfaceHover: #EEF1F8;
+  --color-control: #FFFFFF;
+  --color-controlHover: #F5F7FC;
+  --color-field: #FFFFFF;
+  --color-fieldFocus: #FFFFFF;
+  --color-stroke: #DDE2EC;
+  --color-strokeStrong: #8590A6;
+  --color-winStroke: #D3D9E5;
+  --color-text: #0F172A;
+  --color-text2: #475069;
+  --color-text3: #5F6B85;
+  --color-accent: #3355FF;
+  --color-accentText: #2442E0;
+  --color-accentSoft: #E7ECFF;
+  --color-onAccent: #FFFFFF;
+  --color-onDark: #FFFFFF;
+  --color-success: #117C47;
+  --color-successSoft: #E2F6EA;
+  --color-danger: #C8281E;
+  --color-dangerSoft: #FDECEB;
+  --color-warning: #946200;
+  --color-warningSoft: #FFF4D6;
+  --color-p1: #2F6BFF;
+  --color-p2: #9B51E0;
+  --color-p3: #0E9F8E;
+  --color-flyout: #FFFFFF;
+  --color-subtleHover: #E4E8F1;
+  --shadow-color-window: rgba(0,0,0,0.35);
+  --shadow-color-flyout: rgba(0,0,0,0.32);
+  --shadow-color-pill: rgba(0,0,0,0.08);
+  --shadow-color-tooltip: rgba(0,0,0,0.14);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0E1424;
+  --color-surface: #161E33;
+  --color-surfaceHover: #1E2842;
+  --color-control: #1A2339;
+  --color-controlHover: #222D47;
+  --color-field: #121A2D;
+  --color-fieldFocus: #0F1628;
+  --color-stroke: #2A3554;
+  --color-strokeStrong: #7B88A8;
+  --color-winStroke: #2F3B5C;
+  --color-text: #EAF0FF;
+  --color-text2: #B4BFDA;
+  --color-text3: #8D99B8;
+  --color-accent: #5B8CFF;
+  --color-accentText: #8FB0FF;
+  --color-accentSoft: #1E2C55;
+  --color-onAccent: #07112B;
+  --color-onDark: #07112B;
+  --color-success: #4ADE80;
+  --color-successSoft: #12301F;
+  --color-danger: #FF6B6B;
+  --color-dangerSoft: #3A1A22;
+  --color-warning: #FBBF24;
+  --color-warningSoft: #33290F;
+  --color-p1: #60A5FA;
+  --color-p2: #C084FC;
+  --color-p3: #34D399;
+  --color-flyout: #1A2339;
+  --color-subtleHover: #26304C;
+  --shadow-color-window: rgba(0,0,0,0.6);
+  --shadow-color-flyout: rgba(0,0,0,0.55);
+  --shadow-color-pill: rgba(0,0,0,0.35);
+  --shadow-color-tooltip: rgba(0,0,0,0.45);
+}
+
+:root {
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --font-ui: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+  --shadow-window: 0px 16px 40px var(--shadow-color-window);
+  --shadow-flyout: 0px 8px 24px var(--shadow-color-flyout);
+  --shadow-pill: 0px 4px 12px var(--shadow-color-pill);
+  --type-hero: 700 18px/25px var(--font-ui);
+  --type-heroLarge: 700 16px/22px var(--font-ui);
+  --type-title14: 600 14px/19px var(--font-ui);
+  --type-name: 600 13px/18px var(--font-ui);
+  --type-body: 400 13px/18px var(--font-ui);
+  --type-body13Medium: 500 13px/18px var(--font-ui);
+  --type-button: 500 12px/17px var(--font-ui);
+  --type-label12: 400 12px/17px var(--font-ui);
+  --type-label12Strong: 600 12px/17px var(--font-ui);
+  --type-pill: 600 11px/15px var(--font-ui);
+  --type-caption: 400 11px/15px var(--font-ui);
+  --type-micro: 500 10px/14px var(--font-ui);
+  --type-micro400: 400 10px/14px var(--font-ui);
+  --type-monoPing: 500 12px/17px var(--font-mono);
+  --type-monoAddr: 400 12px/17px var(--font-mono);
+  --type-monoSpeed: 400 11px/15px var(--font-mono);
+  --type-monoSmallMedium: 500 11px/15px var(--font-mono);
+  --type-monoChip: 500 10px/14px var(--font-mono);
+}
