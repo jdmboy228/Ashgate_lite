@@ -602,4 +602,3 @@ func LinkLocal(a Addr) bool {
 	}
 	return false
 }
-

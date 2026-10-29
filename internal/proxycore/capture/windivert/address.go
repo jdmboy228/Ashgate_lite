@@ -104,7 +104,6 @@ func (a *Address) Impostor() bool { return a.bit(bitImpostor) }
 // SetOutbound sets the outbound bit.
 func (a *Address) SetOutbound(on bool) { a.setBit(bitOutbound, on) }
 
-
 // SetImpostor sets the impostor bit so a reinjected packet misses "!impostor".
 func (a *Address) SetImpostor(on bool) { a.setBit(bitImpostor, on) }
 
