@@ -109,6 +109,9 @@ func TestRoutesFollowCurrentProxyPauseAndAllTraffic(t *testing.T) {
 	pid := res.(proxyView).ID
 	chrome, _ := do(t, s, "apps.add", map[string]string{"exePath": `C:\Apps\Chrome.exe`})
 	tg, _ := do(t, s, "apps.add", map[string]string{"exePath": `C:\Apps\Telegram.exe`})
+	if chrome.(appView).Name != "Chrome" {
+		t.Fatalf("name %q", chrome.(appView).Name)
+	}
 	if len(core.cfg.Apps) != 2 || core.cfg.Apps[0].ProxyID != pid {
 		t.Fatalf("routes %+v", core.cfg.Apps)
 	}

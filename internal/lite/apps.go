@@ -40,7 +40,7 @@ func (s *Service) addApp(exePath string) (any, error) {
 	}
 	name := s.found[lowerPath(exePath)].Name
 	if name == "" {
-		name = strings.TrimSuffix(filepath.Base(exePath), filepath.Ext(exePath))
+		name = exeName(exePath)
 	}
 	a := savedApp{ID: newID(), Name: name, ExePath: exePath}
 	s.set.Apps = append(s.set.Apps, a)
@@ -49,6 +49,12 @@ func (s *Service) addApp(exePath string) (any, error) {
 	s.mu.Unlock()
 	s.changed()
 	return view, nil
+}
+
+// exeName is «Telegram» for C:\Apps\Telegram.exe, on any host OS.
+func exeName(path string) string {
+	base := path[strings.LastIndexAny(path, `\/`)+1:]
+	return strings.TrimSuffix(base, filepath.Ext(base))
 }
 
 func (s *Service) appIndexLocked(id string) int {
