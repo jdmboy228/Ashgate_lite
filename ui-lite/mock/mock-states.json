@@ -1,0 +1,883 @@
+{
+ "_note": "Моковые состояния (формат State из docs/bridge-api.md), из которых UI должен отрисовать экраны a–l ровно как в макете. Используйте для ?mock=<frame> и pixel_diff. unavailableSince/sinceMs заданы относительно 'сейчас' (-60s = минуту назад). ui — состояние интерфейса, не данные бэкенда.",
+ "a_pervyj_zapusk": {
+  "state": {
+   "enabled": false,
+   "currentProxyId": null,
+   "proxies": [],
+   "apps": [],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "suggestions": [
+    {
+     "name": "Chrome",
+     "source": "running"
+    },
+    {
+     "name": "Telegram",
+     "source": "running"
+    },
+    {
+     "name": "Dolphin Anty",
+     "source": "startMenu"
+    },
+    {
+     "name": "Discord",
+     "source": "startMenu"
+    }
+   ]
+  }
+ },
+ "b_glavnaya": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    },
+    {
+     "id": "discord",
+     "name": "Discord",
+     "exePath": "C:\\…\\Discord.exe",
+     "status": "error",
+     "error": {
+      "short": "Соединения не проходят",
+      "detail": "Прокси 1 не пропускает UDP — звонки не работают."
+     }
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "hoverAppId": "dolphin",
+   "expandedErrorAppId": "discord"
+  }
+ },
+ "c_ves_trafik": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    }
+   ],
+   "others": {
+    "proxyId": "p1"
+   },
+   "theme": "light",
+   "allTraffic": {
+    "downBps": 4613734,
+    "upBps": 505856
+   }
+  },
+  "ui": {}
+ },
+ "d_vybor_proksi": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    },
+    {
+     "id": "discord",
+     "name": "Discord",
+     "exePath": "C:\\…\\Discord.exe",
+     "status": "error",
+     "error": {
+      "short": "Соединения не проходят",
+      "detail": "Прокси 1 не пропускает UDP — звонки не работают."
+     }
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "pickerOpen": true,
+   "expandedErrorAppId": "discord"
+  }
+ },
+ "e_upravlenie_proksi": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    },
+    {
+     "id": "discord",
+     "name": "Discord",
+     "exePath": "C:\\…\\Discord.exe",
+     "status": "error",
+     "error": {
+      "short": "Соединения не проходят",
+      "detail": "Прокси 1 не пропускает UDP — звонки не работают."
+     }
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "window": "manage"
+  }
+ },
+ "f_poisk_prilozheniya": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    },
+    {
+     "id": "discord",
+     "name": "Discord",
+     "exePath": "C:\\…\\Discord.exe",
+     "status": "error",
+     "error": {
+      "short": "Соединения не проходят",
+      "detail": "Прокси 1 не пропускает UDP — звонки не работают."
+     }
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "screen": "addApp",
+   "query": "dolph",
+   "selectedIndex": 0,
+   "results": [
+    {
+     "name": "Dolphin Anty",
+     "exePath": "C:\\Users\\Admin\\AppData\\Local\\Programs\\Dolphin Anty\\Dolphin Anty.exe",
+     "source": "running"
+    },
+    {
+     "name": "Dolphin Anty Beta",
+     "exePath": "C:\\Program Files\\Dolphin Anty Beta\\dolphin_anty.exe",
+     "source": "programFiles"
+    },
+    {
+     "name": "Dolphin Updater",
+     "exePath": "C:\\Users\\Admin\\AppData\\Local\\Dolphin\\updater.exe",
+     "source": "startMenu"
+    }
+   ]
+  }
+ },
+ "g_proksi_upal": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "checking"
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "checking"
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    }
+   ],
+   "others": "direct",
+   "theme": "light",
+   "proxyDown": {
+    "proxyId": "p1",
+    "sinceMs": "-40s",
+    "fastest": {
+     "proxyId": "p3",
+     "pingMs": 64
+    }
+   }
+  },
+  "ui": {}
+ },
+ "h_kompakt_360x520": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "windowSize": [
+    360,
+    520
+   ]
+  }
+ },
+ "i_proveryaem": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    },
+    {
+     "id": "discord",
+     "name": "Discord",
+     "exePath": "C:\\…\\Discord.exe",
+     "status": "checking"
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "checkingAppId": "discord"
+  }
+ },
+ "j_kompakt_ves_trafik": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    }
+   ],
+   "others": {
+    "proxyId": "p1"
+   },
+   "theme": "light",
+   "allTraffic": {
+    "downBps": 4613734,
+    "upBps": 505856
+   }
+  },
+  "ui": {
+   "windowSize": [
+    360,
+    520
+   ]
+  }
+ },
+ "k_redaktirovanie_proksi": {
+  "state": {
+   "enabled": true,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running",
+     "downBps": 1468006,
+     "upBps": 122880
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running",
+     "downBps": 880640,
+     "upBps": 65536
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    },
+    {
+     "id": "discord",
+     "name": "Discord",
+     "exePath": "C:\\…\\Discord.exe",
+     "status": "error",
+     "error": {
+      "short": "Соединения не проходят",
+      "detail": "Прокси 1 не пропускает UDP — звонки не работают."
+     }
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {
+   "window": "manage",
+   "editProxyId": "p1",
+   "editLink": "socks5://185.12.•••.7:1080"
+  }
+ },
+ "l_vyklyucheno": {
+  "state": {
+   "enabled": false,
+   "currentProxyId": "p1",
+   "proxies": [
+    {
+     "id": "p1",
+     "slot": 1,
+     "type": "SOCKS5",
+     "country": "Германия",
+     "hostMasked": "185.12.•••.7",
+     "port": 1080,
+     "pingMs": 48,
+     "available": true
+    },
+    {
+     "id": "p2",
+     "slot": 2,
+     "type": "HTTP",
+     "country": "США",
+     "hostMasked": "91.204.•••.33",
+     "port": 8080,
+     "pingMs": null,
+     "available": false,
+     "unavailableSince": "-60s",
+     "lastError": "timeout"
+    },
+    {
+     "id": "p3",
+     "slot": 3,
+     "type": "VLESS",
+     "country": "Нидерланды",
+     "hostMasked": "nl-ams.•••.net",
+     "port": 443,
+     "pingMs": 64,
+     "available": true
+    }
+   ],
+   "apps": [
+    {
+     "id": "chrome",
+     "name": "Chrome",
+     "exePath": "C:\\…\\Chrome.exe",
+     "status": "running"
+    },
+    {
+     "id": "dolphin",
+     "name": "Dolphin Anty",
+     "exePath": "C:\\…\\Dolphin Anty.exe",
+     "status": "running"
+    },
+    {
+     "id": "telegram",
+     "name": "Telegram",
+     "exePath": "C:\\…\\Telegram.exe",
+     "status": "notRunning"
+    },
+    {
+     "id": "discord",
+     "name": "Discord",
+     "exePath": "C:\\…\\Discord.exe",
+     "status": "running"
+    }
+   ],
+   "others": "direct",
+   "theme": "light"
+  },
+  "ui": {}
+ }
+}

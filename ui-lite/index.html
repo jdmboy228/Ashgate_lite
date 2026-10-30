@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashgate Lite</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="preload" href="fonts/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+<script>
+  // The theme is applied before the first paint: the backend writes
+  // data-theme into this file; ?theme= is for the design mock mode.
+  (function () {
+    var t = new URLSearchParams(location.search).get("theme");
+    if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+  })();
+</script>
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
