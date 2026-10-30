@@ -19,7 +19,8 @@ answering, the apps' traffic is blocked instead of leaking (kill switch).
 
 ## Build
 
-Needs Go 1.25+, `curl` and `unzip`:
+Needs Go 1.25+. On Windows, double-click `build.bat`. Elsewhere (needs
+`curl` and `unzip`):
 
 ```sh
 bash scripts/build.sh   # dist/ashgate-lite.exe + WinDivert.dll + WinDivert64.sys
